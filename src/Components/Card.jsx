@@ -6,7 +6,6 @@ import imagenMedigo from './utils/images/doctor.jpg';
 
 const Card = ({doctor}) => {
   const {dispatch, state} = useDoctorState();
-  debugger;
   const findFav = state.favs.find((fav) => fav.id === doctor.id);
   console.log(findFav);
   const toggleFav =()=> {

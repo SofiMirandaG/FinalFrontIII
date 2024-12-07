@@ -10,8 +10,8 @@ export const reducer = (state, action) => {
       case "DELETE_FAV":
         const filterFavs= state.favs.filter((fav) => fav.id !== action.payload.id);
         return {  ...state, favs: filterFavs};
-
-        
+        case "THEME":
+          return {  ...state, them: !state.them };        
       default:
         throw new Error("Acción no existente");
     }

@@ -2,11 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { routes } from '../Router/routes'
 import "../styles/Navbar.css";
+import {useDoctorState} from "../Context/global.context";
 
 const Navbar = () => {
+  const {dispatch, state} = useDoctorState();
+  state.isLightTheme = true;;
+  
 
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <Link to={routes.home}>
       <h4>Home</h4>
       </Link>
@@ -18,7 +22,8 @@ const Navbar = () => {
       </Link>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button>Change theme</button>
+      <button onClick={() => dispatch({ type: "THEME" })}>
+      {state.isLightTheme ? true : false}Change theme</button>
     </nav>
   )
 }

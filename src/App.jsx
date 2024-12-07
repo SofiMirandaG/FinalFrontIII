@@ -6,9 +6,11 @@ import "./styles/App.css";
 import Detail from "./Pages/Detail";
 import Favs from "./Pages/Favs";
 import { Layout } from "./Layout/Layout";
+import useLocalStorage from 'use-local-storage'
 
 
 function App() {
+
   return (
 <>
       <Routes>
@@ -20,7 +22,7 @@ function App() {
           <Route path="*" element={<h1>Error 404 - Page not Found</h1>} />
         </Route>
       </Routes>
-    </>
+    </>    
   );
 }
 

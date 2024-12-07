@@ -9,7 +9,7 @@ const Favs = () => {
   return (
     <>
       <h1>Dentists Favs</h1>
-      <div className="card-grid">
+      <div className= {'light-theme list-container'}>
       {state.favs.map((array) => {
           return <Card key={array.id} doctor={array} />
         })}
