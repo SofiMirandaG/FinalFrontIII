@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #d8c7c7;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+  
+  .navbar h4 {
+    color: #fff;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+  }
